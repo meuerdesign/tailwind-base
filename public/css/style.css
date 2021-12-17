@@ -431,8 +431,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   align-items: center;
 }
 
-.text-5xl {
-  font-size: 3rem;
+.justify-center {
+  justify-content: center;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
   line-height: 1;
 }
 
