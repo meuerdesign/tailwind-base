@@ -1,0 +1,23 @@
+{
+  "name": "tailwind-base",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.27.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^9.1.0",
+    "tailwindcss": "^3.0.6"
+  },
+  "scripts": {
+    "sync": "browser-sync start --proxy tailwind-base.app/public/ --files='public/*.html,public/css/*.css'",
+    "dev": "tailwindcss build -i src/main.css -o public/css/style.css",
+    "watch:dev": "nodemon -x npm run dev -w tailwind.config.js -w  public/index.html",
+    "watch": "run-p watch:dev sync"
+  },
+  "author": "",
+  "license": "ISC"
+}
